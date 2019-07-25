@@ -25,7 +25,7 @@ A light-weight tool for light-weight scenarios, `lcp` is a bash script (~170L) t
 > lcp # Now Receiver can paste what Sender has copied!
 ```
 
-It doesn't matter who takes action first. `lcp` can negotiates and establishes a connection in either situation. The network names are long? `lcp` also take custom aliases. For more options see `lcp -h`.
+It doesn't matter who takes action first. `lcp` can negotiates and establishes a connection in either situation. The hostnames are long? `lcp` also take custom aliases. For more options see `lcp -h`.
 
 ## Install
 
@@ -38,7 +38,7 @@ bash <(curl -Ls https://lcp.now.sh/get)
 
 The install script downloads `lcp`, checks for dependencies: `nc` (and `xclip`/`xsel`/`pbcopy` if clipboard integration is enabled), and compiles the missing ones.
 
-`lcp` stores network name aliases in `~/.config/lcphosts`.
+`lcp` stores hostname aliases in `~/.config/lcphosts`. If you want to view your hostname every time pending on receiving (useful if it is transient), set env `LCP_DISPLAYHOST` to 1.
 
 ## Difference with `cp`
 

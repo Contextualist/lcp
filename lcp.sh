@@ -107,7 +107,7 @@ addalias() {
 
 if [ "$is_server" = true ]
 then
-    echo -n "Waiting for incoming files or text..."
+    echo -n "Waiting for incoming files or text...$([[ $LCP_DISPLAYHOST -eq 1 ]] && echo " (You are: $(hostname))")"
     if [ "$(nc "${NC_S_ARGS[@]}" $PORT2)" = "text" ] # rendezvous
     then
         if [ "$destfile" ] || [ "$dest" ]; then
